@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              armyGreen: "#3A4F41",
+              armyOlive: "#6B8E23",
+              armyNight: "#0B0B0B",
+              armyDark: "#1A1A1A",
+              indiaSaffron: "#FF9933",
+              indiaGreen: "#138808",
+              indiaWhite: "#FFFFFF",
+              steelGray: "#4A5568",
+              cadetBlue: "#5D8AA8",
+            },
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+              "roboto-mono": ["Roboto Mono", "monospace"],
+            },
+            animation: {
+              "fade-in": "fadeIn 0.8s ease-in-out",
+              "slide-up": "slideUp 0.6s ease-out",
+              "pulse-glow": "pulseGlow 2s infinite",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              slideUp: {
+                "0%": { transform: "translateY(20px)", opacity: "0" },
+                "100%": { transform: "translateY(0)", opacity: "1" },
+              },
+              pulseGlow: {
+                "0%, 100%": { boxShadow: "0 0 5px rgba(255, 153, 51, 0.3)" },
+                "50%": { boxShadow: "0 0 20px rgba(255, 153, 51, 0.6)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="./exrntCss.css" />
+  </head>
+  <body>
+    <section id="fitness" class="py-16 bg-armyDark">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-center mb-4 section-title"
+        >
+          Physical Fitness Guide
+        </h2>
+        <p class="text-center text-gray-400 max-w-3xl mx-auto mb-12">
+          Building soldiers of steel: endurance, strength, and mental
+          resilience.
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-12">
+          <!-- Fitness Card 1 -->
+          <div class="bg-armyGreen rounded-xl p-6 text-center card-hover">
+            <div class="bg-red-600 inline-flex p-4 rounded-full mb-4">
+              <i class="fas fa-running text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">
+              Endurance Training
+            </h3>
+            <p class="text-gray-300 mb-4">
+              Build cardiovascular strength with running, swimming, and obstacle
+              courses.
+            </p>
+            <div class="text-left">
+              <h4 class="font-bold text-indiaSaffron mb-2">Weekly Routine:</h4>
+              <ul class="text-sm text-gray-400 space-y-1">
+                <li>
+                  <i class="fas fa-arrow-right text-indiaGreen mr-2"></i> 5km
+                  run (Daily)
+                </li>
+                <li>
+                  <i class="fas fa-arrow-right text-indiaGreen mr-2"></i> 10km
+                  rucksack march (Weekly)
+                </li>
+                <li>
+                  <i class="fas fa-arrow-right text-indiaGreen mr-2"></i> Combat
+                  swimming (Bi-weekly)
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Fitness Card 2 -->
+          <div class="bg-armyGreen rounded-xl p-6 text-center card-hover">
+            <div class="bg-yellow-600 inline-flex p-4 rounded-full mb-4">
+              <i class="fas fa-dumbbell text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">
+              Strength & Conditioning
+            </h3>
+            <p class="text-gray-300 mb-4">
+              Develop explosive power and functional strength for combat
+              situations.
+            </p>
+            <div class="text-left">
+              <h4 class="font-bold text-indiaSaffron mb-2">Key Exercises:</h4>
+              <ul class="text-sm text-gray-400 space-y-1">
+                <li>
+                  <i class="fas fa-arrow-right text-indiaGreen mr-2"></i>
+                  Deadlifts & Squats
+                </li>
+                <li>
+                  <i class="fas fa-arrow-right text-indiaGreen mr-2"></i>
+                  Pull-ups & Push-ups
+                </li>
+                <li>
+                  <i class="fas fa-arrow-right text-indiaGreen mr-2"></i>
+                  Kettlebell circuits
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Fitness Card 3 -->
+          <div class="bg-armyGreen rounded-xl p-6 text-center card-hover">
+            <div class="bg-green-600 inline-flex p-4 rounded-full mb-4">
+              <i class="fas fa-brain text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Mental Resilience</h3>
+            <p class="text-gray-300 mb-4">
+              Train the mind for focus, stress management, and tactical
+              decision-making.
+            </p>
+            <div class="text-left">
+              <h4 class="font-bold text-indiaSaffron mb-2">Techniques:</h4>
+              <ul class="text-sm text-gray-400 space-y-1">
+                <li>
+                  <i class="fas fa-arrow-right text-indiaGreen mr-2"></i>
+                  Meditation & Breathwork
+                </li>
+                <li>
+                  <i class="fas fa-arrow-right text-indiaGreen mr-2"></i> Stress
+                  inoculation training
+                </li>
+                <li>
+                  <i class="fas fa-arrow-right text-indiaGreen mr-2"></i> Sleep
+                  optimization
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fitness Schedule -->
+        <div class="bg-armyGreen rounded-xl p-6">
+          <h3 class="text-2xl font-bold text-white mb-6 text-center">
+            Sample Daily Fitness Schedule
+          </h3>
+          <div class="overflow-x-auto">
+            <table class="w-full text-white">
+              <thead class="bg-armyDark">
+                <tr>
+                  <th class="p-3 text-left">Time</th>
+                  <th class="p-3 text-left">Activity</th>
+                  <th class="p-3 text-left">Intensity</th>
+                  <th class="p-3 text-left">Duration</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-700">
+                <tr class="hover:bg-gray-800">
+                  <td class="p-3">05:30</td>
+                  <td class="p-3">Morning Run & Calisthenics</td>
+                  <td class="p-3">
+                    <span
+                      class="bg-red-600 text-white px-2 py-1 rounded text-xs"
+                      >High</span
+                    >
+                  </td>
+                  <td class="p-3">60 min</td>
+                </tr>
+                <tr class="hover:bg-gray-800">
+                  <td class="p-3">08:00</td>
+                  <td class="p-3">Strength Training (Weights)</td>
+                  <td class="p-3">
+                    <span
+                      class="bg-yellow-600 text-white px-2 py-1 rounded text-xs"
+                      >Medium</span
+                    >
+                  </td>
+                  <td class="p-3">90 min</td>
+                </tr>
+                <tr class="hover:bg-gray-800">
+                  <td class="p-3">15:00</td>
+                  <td class="p-3">Martial Arts & Combat Drills</td>
+                  <td class="p-3">
+                    <span
+                      class="bg-red-600 text-white px-2 py-1 rounded text-xs"
+                      >High</span
+                    >
+                  </td>
+                  <td class="p-3">90 min</td>
+                </tr>
+                <tr class="hover:bg-gray-800">
+                  <td class="p-3">17:30</td>
+                  <td class="p-3">Swimming / Obstacle Course</td>
+                  <td class="p-3">
+                    <span
+                      class="bg-green-600 text-white px-2 py-1 rounded text-xs"
+                      >Low</span
+                    >
+                  </td>
+                  <td class="p-3">45 min</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

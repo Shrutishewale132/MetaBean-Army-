@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              armyGreen: "#3A4F41",
+              armyOlive: "#6B8E23",
+              armyNight: "#0B0B0B",
+              armyDark: "#1A1A1A",
+              indiaSaffron: "#FF9933",
+              indiaGreen: "#138808",
+              indiaWhite: "#FFFFFF",
+              steelGray: "#4A5568",
+              cadetBlue: "#5D8AA8",
+            },
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+              "roboto-mono": ["Roboto Mono", "monospace"],
+            },
+            animation: {
+              "fade-in": "fadeIn 0.8s ease-in-out",
+              "slide-up": "slideUp 0.6s ease-out",
+              "pulse-glow": "pulseGlow 2s infinite",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              slideUp: {
+                "0%": { transform: "translateY(20px)", opacity: "0" },
+                "100%": { transform: "translateY(0)", opacity: "1" },
+              },
+              pulseGlow: {
+                "0%, 100%": { boxShadow: "0 0 5px rgba(255, 153, 51, 0.3)" },
+                "50%": { boxShadow: "0 0 20px rgba(255, 153, 51, 0.6)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="./exrntCss.css" />
+  </head>
+  <body>
+    <!-- 11️⃣ EVENTS & CAMPS -->
+    <section class="py-16 bg-armyDark">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-center mb-4 section-title"
+        >
+          Events & NCC Camps
+        </h2>
+        <p class="text-center text-gray-400 max-w-3xl mx-auto mb-12">
+          Upcoming camps, training programs, and national events for youth and
+          cadets.
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-armyGreen p-6 rounded-xl">
+            <div class="flex justify-between items-start mb-4">
+              <span
+                class="bg-red-600 text-white text-xs font-bold px-3 py-1 rounded"
+                >UPCOMING</span
+              >
+              <span class="text-indiaSaffron font-bold">15-30 Dec</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">
+              Winter Training Camp
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm">
+              Advanced winter warfare training for NCC cadets in high altitude
+              regions.
+            </p>
+            <a
+              href="#"
+              class="text-indiaSaffron hover:text-orange-400 text-sm font-medium"
+            >
+              Register Now <i class="fas fa-arrow-right ml-1"></i>
+            </a>
+          </div>
+
+          <div class="bg-armyGreen p-6 rounded-xl">
+            <div class="flex justify-between items-start mb-4">
+              <span
+                class="bg-green-600 text-white text-xs font-bold px-3 py-1 rounded"
+                >ANNUAL</span
+              >
+              <span class="text-indiaSaffron font-bold">Jan 15-26</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Republic Day Camp</h3>
+            <p class="text-gray-300 mb-4 text-sm">
+              Premier NCC camp with selection for Republic Day Parade at
+              Rajpath.
+            </p>
+            <a
+              href="#"
+              class="text-indiaSaffron hover:text-orange-400 text-sm font-medium"
+            >
+              Learn More <i class="fas fa-arrow-right ml-1"></i>
+            </a>
+          </div>
+
+          <div class="bg-armyGreen p-6 rounded-xl">
+            <div class="flex justify-between items-start mb-4">
+              <span
+                class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded"
+                >NEW</span
+              >
+              <span class="text-indiaSaffron font-bold">Monthly</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">
+              Youth Leadership Program
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm">
+              Develop leadership skills through adventure activities and
+              military training.
+            </p>
+            <a
+              href="#"
+              class="text-indiaSaffron hover:text-orange-400 text-sm font-medium"
+            >
+              Apply Now <i class="fas fa-arrow-right ml-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="mt-12 text-center">
+          <a
+            href="#"
+            class="inline-flex items-center border-2 border-indiaSaffron hover:bg-indiaSaffron text-white font-bold py-3 px-8 rounded-lg transition duration-300"
+          >
+            <i class="fas fa-calendar-alt mr-2"></i> View All Events Calendar
+          </a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

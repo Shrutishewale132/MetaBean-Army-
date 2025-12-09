@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              armyGreen: "#3A4F41",
+              armyOlive: "#6B8E23",
+              armyNight: "#0B0B0B",
+              armyDark: "#1A1A1A",
+              indiaSaffron: "#FF9933",
+              indiaGreen: "#138808",
+              indiaWhite: "#FFFFFF",
+              steelGray: "#4A5568",
+              cadetBlue: "#5D8AA8",
+            },
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+              "roboto-mono": ["Roboto Mono", "monospace"],
+            },
+            animation: {
+              "fade-in": "fadeIn 0.8s ease-in-out",
+              "slide-up": "slideUp 0.6s ease-out",
+              "pulse-glow": "pulseGlow 2s infinite",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              slideUp: {
+                "0%": { transform: "translateY(20px)", opacity: "0" },
+                "100%": { transform: "translateY(0)", opacity: "1" },
+              },
+              pulseGlow: {
+                "0%, 100%": { boxShadow: "0 0 5px rgba(255, 153, 51, 0.3)" },
+                "50%": { boxShadow: "0 0 20px rgba(255, 153, 51, 0.6)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="./exrntCss.css" />
+  </head>
+  <body>
+    <section class="py-16 bg-armyDark">
+      <div class="max-w-4xl mx-auto px-6">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-center mb-4 section-title"
+        >
+          Help & FAQ
+        </h2>
+        <p class="text-center text-gray-400 max-w-2xl mx-auto mb-12">
+          Find answers to frequently asked questions about joining, training,
+          and career in the Indian Army.
+        </p>
+
+        <div class="space-y-4">
+          <!-- FAQ Item 1 -->
+          <div class="bg-armyGreen rounded-xl overflow-hidden">
+            <button
+              class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-800 transition duration-300"
+            >
+              <span class="text-lg font-bold text-white"
+                >What are the educational qualifications required to join the
+                Indian Army?</span
+              >
+              <i class="fas fa-chevron-down text-indiaSaffron"></i>
+            </button>
+            <div class="faq-answer p-6 border-t border-gray-700 hidden">
+              <p class="text-gray-300">
+                Educational requirements vary by entry scheme. For NDA: 10+2
+                with Physics, Chemistry, and Mathematics. For CDS: Graduation
+                degree. For Technical Entries: Engineering degree in specified
+                streams. For Soldier entries: 10th or 12th pass depending on the
+                trade.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="bg-armyGreen rounded-xl overflow-hidden">
+            <button
+              class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-800 transition duration-300"
+            >
+              <span class="text-lg font-bold text-white"
+                >What is the age limit for joining the Indian Army?</span
+              >
+              <i class="fas fa-chevron-down text-indiaSaffron"></i>
+            </button>
+            <div class="faq-answer p-6 border-t border-gray-700 hidden">
+              <p class="text-gray-300">
+                Age limits vary: NDA (16.5-19.5 years), CDS (19-24 years),
+                Technical Entries (20-27 years), Agniveer (17.5-21 years), and
+                other soldier entries (17.5-23 years). Age relaxation is
+                provided for certain categories as per government rules.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="bg-armyGreen rounded-xl overflow-hidden">
+            <button
+              class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-800 transition duration-300"
+            >
+              <span class="text-lg font-bold text-white"
+                >What is the selection process for officer entries?</span
+              >
+              <i class="fas fa-chevron-down text-indiaSaffron"></i>
+            </button>
+            <div class="faq-answer p-6 border-t border-gray-700 hidden">
+              <p class="text-gray-300">
+                The selection process typically includes: 1) Written
+                examination, 2) SSB Interview (5-day process with psychological
+                tests, group tasks, and personal interview), 3) Medical
+                examination, and 4) Merit list preparation.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="bg-armyGreen rounded-xl overflow-hidden">
+            <button
+              class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-800 transition duration-300"
+            >
+              <span class="text-lg font-bold text-white"
+                >Can women join the Indian Army in combat roles?</span
+              >
+              <i class="fas fa-chevron-down text-indiaSaffron"></i>
+            </button>
+            <div class="faq-answer p-6 border-t border-gray-700 hidden">
+              <p class="text-gray-300">
+                Yes, women are now being inducted into various combat roles.
+                Initially through the Armed Forces Special Powers Act, women are
+                now being commissioned into regiments like Corps of Engineers,
+                Corps of Signals, and more recently into Artillery regiments.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 5 -->
+          <div class="bg-armyGreen rounded-xl overflow-hidden">
+            <button
+              class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-800 transition duration-300"
+            >
+              <span class="text-lg font-bold text-white"
+                >What is the Agniveer scheme and how does it work?</span
+              >
+              <i class="fas fa-chevron-down text-indiaSaffron"></i>
+            </button>
+            <div class="faq-answer p-6 border-t border-gray-700 hidden">
+              <p class="text-gray-300">
+                Agniveer is a new scheme where soldiers are recruited for a
+                four-year tenure. After completion, up to 25% may be retained
+                for regular service based on performance. Agniveers receive
+                training, salary, and a lump-sum "Seva Nidhi" package upon
+                completion.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 text-center">
+          <p class="text-gray-400 mb-6">
+            Still have questions? We're here to help.
+          </p>
+          <a
+            href="#"
+            class="inline-flex items-center bg-indiaSaffron hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg transition duration-300"
+          >
+            <i class="fas fa-question-circle mr-2"></i> Contact Support
+          </a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

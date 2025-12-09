@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indian Army Training & Motivation Hub | Serve with Honor</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              armyGreen: "#3A4F41",
+              armyOlive: "#6B8E23",
+              armyNight: "#0B0B0B",
+              armyDark: "#1A1A1A",
+              indiaSaffron: "#FF9933",
+              indiaGreen: "#138808",
+              indiaWhite: "#FFFFFF",
+              steelGray: "#4A5568",
+              cadetBlue: "#5D8AA8",
+            },
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+              "roboto-mono": ["Roboto Mono", "monospace"],
+            },
+            animation: {
+              "fade-in": "fadeIn 0.8s ease-in-out",
+              "slide-up": "slideUp 0.6s ease-out",
+              "pulse-glow": "pulseGlow 2s infinite",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              slideUp: {
+                "0%": { transform: "translateY(20px)", opacity: "0" },
+                "100%": { transform: "translateY(0)", opacity: "1" },
+              },
+              pulseGlow: {
+                "0%, 100%": { boxShadow: "0 0 5px rgba(255, 153, 51, 0.3)" },
+                "50%": { boxShadow: "0 0 20px rgba(255, 153, 51, 0.6)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="./exrntCss.css" />
+  </head>
+
+  <body class="bg-armyNight text-indiaWhite font-poppins">
+    <!-- 🌟 NAVBAR -->
+    <header
+      class="bg-armyDark sticky top-0 z-50 shadow-lg border-b border-armyOlive"
+    >
+      <nav
+        class="max-w-7xl mx-auto flex justify-between items-center p-4 lg:p-6"
+      >
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+          <div class="bg-indiaSaffron p-2 rounded-full">
+            <i class="fas fa-shield-alt text-white text-xl"></i>
+          </div>
+          <h1 class="text-xl lg:text-2xl font-bold tracking-wide">
+            <span class="text-indiaSaffron">Indian</span>
+            <span class="text-indiaGreen">Army</span>
+            <span class="text-indiaWhite">Hub</span>
+            <span class="text-red-500 ml-2">🇮🇳</span>
+          </h1>
+        </div>
+
+        <!-- Desktop Menu -->
+        <ul class="hidden lg:flex items-center space-x-8 font-medium">
+          <li>
+            <a
+              href="#home"
+              class="hover:text-indiaSaffron transition-colors duration-300 flex items-center space-x-1"
+              ><i class="fas fa-home"></i><span>Home</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="./ranks.html"
+              target="_blank"
+              class="hover:text-indiaSaffron transition-colors duration-300 flex items-center space-x-1"
+              ><i class="fas fa-star"></i><span>Ranks</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="./training.html"
+              target="_blank"
+              class="hover:text-indiaSaffron transition-colors duration-300 flex items-center space-x-1"
+              ><i class="fas fa-graduation-cap"></i><span>Training</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="./fitness.html"
+              target="_blank"
+              class="hover:text-indiaSaffron transition-colors duration-300 flex items-center space-x-1"
+              ><i class="fas fa-dumbbell"></i><span>Fitness</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="./gallery.html"
+              target="_blank"
+              class="hover:text-indiaSaffron transition-colors duration-300 flex items-center space-x-1"
+              ><i class="fas fa-images"></i><span>Gallery</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="./join.html"
+              target="_blank"
+              class="bg-indiaGreen hover:bg-green-700 text-white px-4 py-2 rounded-lg transition duration-300 font-semibold"
+              >Join Army</a
+            >
+          </li>
+          <li>
+            <a
+              href="./login.html"
+              target="_blank"
+              class="hover:text-indiaSaffron transition-colors duration-300 flex items-center space-x-1"
+              ><i class="fas fa-user"></i><span>Login</span></a
+            >
+          </li>
+        </ul>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobileMenuBtn" class="lg:hidden text-white text-2xl">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobileMenu"
+        class="lg:hidden bg-armyDark border-t border-armyOlive hidden"
+      >
+        <ul class="flex flex-col space-y-4 p-6">
+          <li>
+            <a
+              href="#home"
+              class="hover:text-indiaSaffron transition-colors duration-300 block py-2"
+              ><i class="fas fa-home mr-3"></i>Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="./ranks.html"
+              target="_blank"
+              class="hover:text-indiaSaffron transition-colors duration-300 block py-2"
+              ><i class="fas fa-star mr-3"></i>Ranks & Badges</a
+            >
+          </li>
+          <li>
+            <a
+              href="./training.html"
+              class="hover:text-indiaSaffron transition-colors duration-300 block py-2"
+              ><i class="fas fa-graduation-cap mr-3"></i>Training Programs</a
+            >
+          </li>
+          <li>
+            <a
+              href="#fitness"
+              class="hover:text-indiaSaffron transition-colors duration-300 block py-2"
+              ><i class="fas fa-dumbbell mr-3"></i>Fitness Guide</a
+            >
+          </li>
+          <li>
+            <a
+              href="#gallery"
+              class="hover:text-indiaSaffron transition-colors duration-300 block py-2"
+              ><i class="fas fa-images mr-3"></i>Gallery</a
+            >
+          </li>
+          <li>
+            <a
+              href="#join"
+              class="bg-indiaGreen hover:bg-green-700 text-white px-4 py-2 rounded-lg transition duration-300 font-semibold block text-center mt-2"
+              >Join Army</a
+            >
+          </li>
+          <li>
+            <a
+              href="#login"
+              class="hover:text-indiaSaffron transition-colors duration-300 block py-2"
+              ><i class="fas fa-user mr-3"></i>Login</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- 1️⃣ HOME / HERO SECTION -->
+    <section
+      id="home"
+      class="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
+      <!-- Background Image -->
+      <div class="absolute inset-0 z-0">
+        <img
+          src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
+          alt="Indian Army Soldiers"
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 hero-overlay"></div>
+      </div>
+
+      <!-- Hero Content -->
+      <div
+        class="relative z-10 max-w-6xl mx-auto px-6 text-center animate-fade-in"
+      >
+        <div
+          class="inline-block p-1 rounded-full bg-gradient-to-r from-indiaSaffron to-indiaGreen mb-6 animate-pulse-glow"
+        >
+          <div class="bg-armyDark p-2 rounded-full">
+            <i class="fas fa-medal text-3xl text-yellow-400"></i>
+          </div>
+        </div>
+
+        <h1
+          class="text-4xl md:text-6xl font-bold mb-6 leading-tight tracking-in-expand"
+        >
+          <span class="text-indiaWhite">SERVE WITH</span>
+          <span class="text-indiaSaffron">HONOR</span>
+        </h1>
+
+        <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-10">
+          Join the elite guardians of our nation. Train with the best to protect
+          the sovereignty of India.
+        </p>
+
+        <div class="flex flex-col md:flex-row justify-center gap-6">
+          <a
+            href="./join.html"
+            class="bg-indiaSaffron hover:bg-orange-600 text-white font-bold py-3 px-8  text-lg transition duration-300 transform hover:scale-105 shadow-lg"target="_blank"
+          >
+            <i class="fas fa-user-plus mr-2"></i> JOIN INDIAN ARMY
+          </a>
+          <a
+            href="./training.html"
+            class="bg-transparent border-2 border-indiaGreen hover:bg-indiaGreen text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300 transform hover:scale-105"target="_blank"
+          >
+            <i class="fas fa-graduation-cap mr-2"></i> EXPLORE TRAINING
+          </a>
+        </div>
+
+        <!-- Stats -->
+        <div
+          class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto"
+        >
+          <div class="bg-armyDark bg-opacity-70 p-4 rounded-xl">
+            <div class="text-3xl font-bold text-indiaSaffron">1.4M+</div>
+            <div class="text-gray-300">Active Personnel</div>
+          </div>
+          <div class="bg-armyDark bg-opacity-70 p-4 rounded-xl">
+            <div class="text-3xl font-bold text-indiaGreen">65+</div>
+            <div class="text-gray-300">Regiments</div>
+          </div>
+          <div class="bg-armyDark bg-opacity-70 p-4 rounded-xl">
+            <div class="text-3xl font-bold text-cadetBlue">200+</div>
+            <div class="text-gray-300">Years of Legacy</div>
+          </div>
+          <div class="bg-armyDark bg-opacity-70 p-4 rounded-xl">
+            <div class="text-3xl font-bold text-yellow-400">7</div>
+            <div class="text-gray-300">Valour Awards</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2">
+        <a
+          href="#home"
+          class="text-gray-400 hover:text-indiaSaffron animate-bounce"
+        >
+          <i class="fas fa-chevron-down text-3xl"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- 2️⃣ RANKS & BADGES -->
+
+    <!-- 3️⃣ TRAINING PROGRAMS -->
+    <!-- 4️⃣ PHYSICAL FITNESS GUIDE -->
+    <!-- 5️⃣ WEAPONS AWARENESS -->
+
+    <!-- 6️⃣ INSPIRATIONAL STORIES -->
+
+    <!-- 7️⃣ REGIMENTS HISTORY -->
+
+    <!-- 8️⃣ GALLERY -->
+
+    <!-- 9️⃣ CONTACT ACADEMY -->
+
+    <!-- 🔟 JOIN ARMY -->
+
+    <!-- 11️⃣ EVENTS & CAMPS -->
+
+    <!-- 12️⃣ LOGIN / REGISTER -->
+
+    <!-- 13️⃣ CADET DASHBOARD -->
+
+    <!-- 14️⃣ ABOUT INDIAN ARMY -->
+
+    <!-- 15️⃣ FAQ -->
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-10 border-t border-gray-800">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-8 mb-10">
+          <!-- Column 1 -->
+          <div>
+            <div class="flex items-center mb-6">
+              <div class="bg-indiaSaffron p-2 rounded-full mr-3">
+                <i class="fas fa-shield-alt text-white"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white">Indian Army Hub</h3>
+            </div>
+            <p class="text-gray-400 text-sm mb-6">
+              Official digital platform for Indian Army training, recruitment,
+              and awareness. Serving the nation with pride and honor.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="bg-gray-800 hover:bg-indiaSaffron text-white p-2 rounded-full transition duration-300"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="#"
+                class="bg-gray-800 hover:bg-blue-400 text-white p-2 rounded-full transition duration-300"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="#"
+                class="bg-gray-800 hover:bg-pink-600 text-white p-2 rounded-full transition duration-300"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="#"
+                class="bg-gray-800 hover:bg-red-600 text-white p-2 rounded-full transition duration-300"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 2 -->
+          <div>
+            <h4 class="text-lg font-bold text-white mb-6">Quick Links</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="./contact.html"
+                  target="_blank"
+                  class="text-gray-400 hover:text-indiaSaffron transition duration-300"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#ranks"
+                  class="text-gray-400 hover:text-indiaSaffron transition duration-300"
+                  >Ranks & Badges</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#training"
+                  class="text-gray-400 hover:text-indiaSaffron transition duration-300"
+                  >Training Programs</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#join"
+                  class="text-gray-400 hover:text-indiaSaffron transition duration-300"
+                  >Join Indian Army</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#login"
+                  class="text-gray-400 hover:text-indiaSaffron transition duration-300"
+                  >Login / Register</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3 -->
+          <div>
+            <h4 class="text-lg font-bold text-white mb-6">Resources</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="./faq.html"
+                  target="_blank"
+                  class="text-gray-400 hover:text-indiaSaffron transition duration-300"
+                  >FAQ</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./dashboard.html"
+                  target="_blank"
+                  class="text-gray-400 hover:text-indiaSaffron transition duration-300"
+                  >Dashboard</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./weapons.html"
+                  target="_blank"
+                  class="text-gray-400 hover:text-indiaSaffron transition duration-300"
+                  >Weapons</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./stories.html"
+                  target="_blank"
+                  class="text-gray-400 hover:text-indiaSaffron transition duration-300"
+                  >Inspirational Stories</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./regiments.html"
+                  target="_blank"
+                  class="text-gray-400 hover:text-indiaSaffron transition duration-300"
+                  >Regiments History</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 4 -->
+          <div>
+            <h4 class="text-lg font-bold text-white mb-6">Contact Info</h4>
+            <ul class="space-y-3 text-gray-400">
+              <li class="flex items-start">
+                <i
+                  class="fas fa-map-marker-alt text-indiaSaffron mr-3 mt-1"
+                ></i>
+                <span>South Block, New Delhi - 110011</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-phone-alt text-indiaSaffron mr-3"></i>
+                <span>1800-XXX-ARMY (2769)</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-envelope text-indiaSaffron mr-3"></i>
+                <span>info@indianarmyhub.gov.in</span>
+              </li>
+            </ul>
+
+            <div class="mt-6">
+              <div class="flex items-center">
+                <div class="w-8 h-8 bg-indiaSaffron rounded-full mr-2"></div>
+                <div class="w-8 h-8 bg-indiaWhite rounded-full mr-2"></div>
+                <div class="w-8 h-8 bg-indiaGreen rounded-full"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="border-t border-gray-800 pt-8 text-center">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-400 text-sm mb-4 md:mb-0">
+              © 2025 Indian Army Training & Motivation Hub. All Rights Reserved.
+            </p>
+            <div class="flex space-x-6">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-indiaSaffron text-sm transition duration-300"
+                >Privacy Policy</a
+              >
+              <a
+                href="#"
+                class="text-gray-400 hover:text-indiaSaffron text-sm transition duration-300"
+                >Terms of Service</a
+              >
+              <a
+                href="#"
+                class="text-gray-400 hover:text-indiaSaffron text-sm transition duration-300"
+                >Accessibility</a
+              >
+              <a
+                href="#"
+                class="text-gray-400 hover:text-indiaSaffron text-sm transition duration-300"
+                >Sitemap</a
+              >
+            </div>
+          </div>
+
+          <div class="mt-6">
+            <p class="text-gray-500 text-sm">
+              This is an informational website. For official recruitment and
+              announcements, please visit
+              <a
+                href="https://joinindianarmy.nic.in"
+                class="text-indiaSaffron hover:text-orange-400"
+                >joinindianarmy.nic.in</a
+              >
+            </p>
+          </div>
+
+          <div class="mt-6">
+            <p class="text-indiaSaffron font-bold text-xl">JAI HIND 🇮🇳</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+      // Mobile Menu Toggle
+      document
+        .getElementById("mobileMenuBtn")
+        .addEventListener("click", function () {
+          const mobileMenu = document.getElementById("mobileMenu");
+          mobileMenu.classList.toggle("hidden");
+
+          // Toggle icon
+          const icon = this.querySelector("i");
+          if (icon.classList.contains("fa-bars")) {
+            icon.classList.remove("fa-bars");
+            icon.classList.add("fa-times");
+          } else {
+            icon.classList.remove("fa-times");
+            icon.classList.add("fa-bars");
+          }
+        });
+
+      // FAQ Toggle
+      document.querySelectorAll(".faq-question").forEach((button) => {
+        button.addEventListener("click", () => {
+          const answer = button.nextElementSibling;
+          const icon = button.querySelector("i");
+
+          // Toggle answer visibility
+          answer.classList.toggle("hidden");
+
+          // Toggle icon
+          if (icon.classList.contains("fa-chevron-down")) {
+            icon.classList.remove("fa-chevron-down");
+            icon.classList.add("fa-chevron-up");
+          } else {
+            icon.classList.remove("fa-chevron-up");
+            icon.classList.add("fa-chevron-down");
+          }
+
+          // Close other FAQs (optional)
+          // document.querySelectorAll('.faq-answer').forEach(otherAnswer => {
+          //     if (otherAnswer !== answer && !otherAnswer.classList.contains('hidden')) {
+          //         otherAnswer.classList.add('hidden');
+          //         const otherIcon = otherAnswer.previousElementSibling.querySelector('i');
+          //         otherIcon.classList.remove('fa-chevron-up');
+          //         otherIcon.classList.add('fa-chevron-down');
+          //     }
+          // });
+        });
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          if (targetId === "#") return;
+
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: "smooth",
+            });
+
+            // Close mobile menu if open
+            const mobileMenu = document.getElementById("mobileMenu");
+            const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+            const mobileIcon = mobileMenuBtn.querySelector("i");
+
+            if (!mobileMenu.classList.contains("hidden")) {
+              mobileMenu.classList.add("hidden");
+              mobileIcon.classList.remove("fa-times");
+              mobileIcon.classList.add("fa-bars");
+            }
+          }
+        });
+      });
+
+      // Navbar background on scroll
+      window.addEventListener("scroll", function () {
+        const header = document.querySelector("header");
+        if (window.scrollY > 50) {
+          header.classList.add("shadow-xl");
+          header.classList.add("bg-opacity-95");
+        } else {
+          header.classList.remove("shadow-xl");
+          header.classList.remove("bg-opacity-95");
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              armyGreen: "#3A4F41",
+              armyOlive: "#6B8E23",
+              armyNight: "#0B0B0B",
+              armyDark: "#1A1A1A",
+              indiaSaffron: "#FF9933",
+              indiaGreen: "#138808",
+              indiaWhite: "#FFFFFF",
+              steelGray: "#4A5568",
+              cadetBlue: "#5D8AA8",
+            },
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+              "roboto-mono": ["Roboto Mono", "monospace"],
+            },
+            animation: {
+              "fade-in": "fadeIn 0.8s ease-in-out",
+              "slide-up": "slideUp 0.6s ease-out",
+              "pulse-glow": "pulseGlow 2s infinite",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              slideUp: {
+                "0%": { transform: "translateY(20px)", opacity: "0" },
+                "100%": { transform: "translateY(0)", opacity: "1" },
+              },
+              pulseGlow: {
+                "0%, 100%": { boxShadow: "0 0 5px rgba(255, 153, 51, 0.3)" },
+                "50%": { boxShadow: "0 0 20px rgba(255, 153, 51, 0.6)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="./exrntCss.css" />
+  </head>
+  <body>
+    <section
+      id="join"
+      class="parallax-section py-16"
+      style="
+        background-image: url('https://images.unsplash.com/photo-1548032885-b5e38734688a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80');
+      "
+    >
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="bg-armyDark bg-opacity-90 rounded-2xl p-8 md:p-12">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-center mb-4 section-title"
+          >
+            Join the Indian Army
+          </h2>
+          <p class="text-center text-gray-300 max-w-3xl mx-auto mb-12">
+            Serve the nation with pride. Find your path to becoming a soldier,
+            officer, or specialist.
+          </p>
+
+          <div class="grid md:grid-cols-3 gap-8 mb-12">
+            <!-- Option 1 -->
+            <div class="bg-armyGreen rounded-xl p-6 text-center card-hover">
+              <div class="bg-indiaSaffron inline-flex p-4 rounded-full mb-4">
+                <i class="fas fa-user-graduate text-white text-2xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-3">Officer Entry</h3>
+              <p class="text-gray-300 mb-4">
+                Join as a commissioned officer through NDA, CDS, or Technical
+                Entries.
+              </p>
+              <ul class="text-sm text-gray-400 space-y-2 mb-4">
+                <li>National Defence Academy (NDA)</li>
+                <li>Combined Defence Services (CDS)</li>
+                <li>Technical Graduate Course (TGC)</li>
+              </ul>
+              <a
+                href="#"
+                class="inline-block bg-indiaSaffron hover:bg-orange-600 text-white font-bold py-2 px-6 rounded-lg transition duration-300 text-sm"
+              >
+                Eligibility & Apply
+              </a>
+            </div>
+
+            <!-- Option 2 -->
+            <div class="bg-armyGreen rounded-xl p-6 text-center card-hover">
+              <div class="bg-indiaGreen inline-flex p-4 rounded-full mb-4">
+                <i class="fas fa-users text-white text-2xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-3">Soldier Entry</h3>
+              <p class="text-gray-300 mb-4">
+                Join as a Jawan through Agniveer, General Duty, or Technical
+                trades.
+              </p>
+              <ul class="text-sm text-gray-400 space-y-2 mb-4">
+                <li>Agniveer (New Scheme)</li>
+                <li>General Duty (GD)</li>
+                <li>Technical & Tradesmen</li>
+              </ul>
+              <a
+                href="#"
+                class="inline-block bg-indiaSaffron hover:bg-orange-600 text-white font-bold py-2 px-6 rounded-lg transition duration-300 text-sm"
+              >
+                Eligibility & Apply
+              </a>
+            </div>
+
+            <!-- Option 3 -->
+            <div class="bg-armyGreen rounded-xl p-6 text-center card-hover">
+              <div class="bg-cadetBlue inline-flex p-4 rounded-full mb-4">
+                <i class="fas fa-stethoscope text-white text-2xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-3">
+                Specialist Entry
+              </h3>
+              <p class="text-gray-300 mb-4">
+                Doctors, engineers, lawyers, and other professionals can join
+                through special entries.
+              </p>
+              <ul class="text-sm text-gray-400 space-y-2 mb-4">
+                <li>Army Medical Corps (AMC)</li>
+                <li>Judge Advocate General (JAG)</li>
+                <li>Engineers & Technical</li>
+              </ul>
+              <a
+                href="#"
+                class="inline-block bg-indiaSaffron hover:bg-orange-600 text-white font-bold py-2 px-6 rounded-lg transition duration-300 text-sm"
+              >
+                Eligibility & Apply
+              </a>
+            </div>
+          </div>
+
+          <div class="text-center">
+            <a
+              href="#"
+              class="inline-flex items-center bg-gradient-to-r from-indiaSaffron to-indiaGreen hover:opacity-90 text-white font-bold py-4 px-10 rounded-lg text-lg transition duration-300 shadow-lg"
+            >
+              <i class="fas fa-file-alt mr-2"></i> Start Your Application Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

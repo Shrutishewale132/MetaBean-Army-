@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              armyGreen: "#3A4F41",
+              armyOlive: "#6B8E23",
+              armyNight: "#0B0B0B",
+              armyDark: "#1A1A1A",
+              indiaSaffron: "#FF9933",
+              indiaGreen: "#138808",
+              indiaWhite: "#FFFFFF",
+              steelGray: "#4A5568",
+              cadetBlue: "#5D8AA8",
+            },
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+              "roboto-mono": ["Roboto Mono", "monospace"],
+            },
+            animation: {
+              "fade-in": "fadeIn 0.8s ease-in-out",
+              "slide-up": "slideUp 0.6s ease-out",
+              "pulse-glow": "pulseGlow 2s infinite",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              slideUp: {
+                "0%": { transform: "translateY(20px)", opacity: "0" },
+                "100%": { transform: "translateY(0)", opacity: "1" },
+              },
+              pulseGlow: {
+                "0%, 100%": { boxShadow: "0 0 5px rgba(255, 153, 51, 0.3)" },
+                "50%": { boxShadow: "0 0 20px rgba(255, 153, 51, 0.6)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="./exrntCss.css" />
+  </head>
+  <body>
+    <section id="login" class="py-16 bg-armyGreen">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="bg-armyDark rounded-2xl p-8 md:p-12">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-center mb-4 section-title"
+          >
+            Login / Register
+          </h2>
+          <p class="text-center text-gray-400 max-w-xl mx-auto mb-12">
+            Access personalized dashboard, training materials, and application
+            tracking.
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-8">
+            <!-- Login Form -->
+            <div class="bg-armyGreen p-6 rounded-xl">
+              <h3 class="text-2xl font-bold text-white mb-6 text-center">
+                Existing User
+              </h3>
+              <form class="space-y-4">
+                <div>
+                  <label class="block text-gray-300 mb-2"
+                    >Email or Service Number</label
+                  >
+                  <input
+                    type="text"
+                    class="w-full bg-armyDark border border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:ring-2 focus:ring-indiaSaffron"
+                  />
+                </div>
+
+                <div>
+                  <label class="block text-gray-300 mb-2">Password</label>
+                  <input
+                    type="password"
+                    class="w-full bg-armyDark border border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:ring-2 focus:ring-indiaSaffron"
+                  />
+                </div>
+
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center">
+                    <input type="checkbox" id="remember" class="mr-2" />
+                    <label for="remember" class="text-gray-300 text-sm"
+                      >Remember me</label
+                    >
+                  </div>
+                  <a
+                    href="#"
+                    class="text-indiaSaffron hover:text-orange-400 text-sm"
+                    >Forgot Password?</a
+                  >
+                </div>
+
+                <button
+                  type="submit"
+                  class="w-full bg-indiaSaffron hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg transition duration-300"
+                >
+                  Login <i class="fas fa-sign-in-alt ml-2"></i>
+                </button>
+              </form>
+            </div>
+
+            <!-- Registration -->
+            <div class="bg-armyGreen p-6 rounded-xl">
+              <h3 class="text-2xl font-bold text-white mb-6 text-center">
+                New Registration
+              </h3>
+              <p class="text-gray-300 text-center mb-6">
+                Create your account to access training materials, track
+                applications, and get personalized updates.
+              </p>
+
+              <div class="space-y-4">
+                <a
+                  href="#"
+                  class="block bg-indiaSaffron hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg transition duration-300 text-center"
+                >
+                  <i class="fas fa-user-plus mr-2"></i> Register as Cadet /
+                  Applicant
+                </a>
+
+                <a
+                  href="#"
+                  class="block bg-indiaGreen hover:bg-green-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300 text-center"
+                >
+                  <i class="fas fa-chalkboard-teacher mr-2"></i> Register as NCC
+                  Officer
+                </a>
+
+                <a
+                  href="#"
+                  class="block border-2 border-indiaSaffron hover:bg-indiaSaffron text-white font-bold py-3 px-8 rounded-lg transition duration-300 text-center"
+                >
+                  <i class="fas fa-eye mr-2"></i> Guest Access
+                </a>
+              </div>
+
+              <div class="mt-6 text-center">
+                <p class="text-gray-400 text-sm">
+                  By registering, you agree to our
+                  <a href="#" class="text-indiaSaffron hover:text-orange-400"
+                    >Terms of Service</a
+                  >
+                  and
+                  <a href="#" class="text-indiaSaffron hover:text-orange-400"
+                    >Privacy Policy</a
+                  >.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

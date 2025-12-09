@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              armyGreen: "#3A4F41",
+              armyOlive: "#6B8E23",
+              armyNight: "#0B0B0B",
+              armyDark: "#1A1A1A",
+              indiaSaffron: "#FF9933",
+              indiaGreen: "#138808",
+              indiaWhite: "#FFFFFF",
+              steelGray: "#4A5568",
+              cadetBlue: "#5D8AA8",
+            },
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+              "roboto-mono": ["Roboto Mono", "monospace"],
+            },
+            animation: {
+              "fade-in": "fadeIn 0.8s ease-in-out",
+              "slide-up": "slideUp 0.6s ease-out",
+              "pulse-glow": "pulseGlow 2s infinite",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              slideUp: {
+                "0%": { transform: "translateY(20px)", opacity: "0" },
+                "100%": { transform: "translateY(0)", opacity: "1" },
+              },
+              pulseGlow: {
+                "0%, 100%": { boxShadow: "0 0 5px rgba(255, 153, 51, 0.3)" },
+                "50%": { boxShadow: "0 0 20px rgba(255, 153, 51, 0.6)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="./exrntCss.css" />
+  </head>
+  <body>
+    <!-- 2️⃣ RANKS & BADGES -->
+    <section id="ranks" class="py-16 bg-armyDark">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-center mb-4 section-title"
+        >
+          Ranks & Badges
+        </h2>
+        <p class="text-center text-gray-400 max-w-3xl mx-auto mb-12">
+          Hierarchy and insignia of the Indian Army - a symbol of authority,
+          responsibility, and honor.
+        </p>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Commissioned Officers -->
+          <div class="bg-armyGreen rounded-xl p-6 card-hover">
+            <div class="flex items-center mb-4">
+              <div class="bg-indiaSaffron p-3 rounded-full mr-4">
+                <i class="fas fa-crown text-white text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white">
+                Commissioned Officers
+              </h3>
+            </div>
+            <ul class="space-y-3">
+              <li class="flex items-center">
+                <i class="fas fa-star text-yellow-400 mr-3"></i>
+                <span class="text-gray-300">Field Marshal</span>
+                <span class="ml-auto text-indiaSaffron font-semibold"
+                  >5 Stars</span
+                >
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-star text-yellow-400 mr-3"></i>
+                <span class="text-gray-300">General</span>
+                <span class="ml-auto text-indiaSaffron font-semibold"
+                  >4 Stars</span
+                >
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-star text-yellow-400 mr-3"></i>
+                <span class="text-gray-300">Lieutenant General</span>
+                <span class="ml-auto text-indiaSaffron font-semibold"
+                  >3 Stars</span
+                >
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-star text-yellow-400 mr-3"></i>
+                <span class="text-gray-300">Major General</span>
+                <span class="ml-auto text-indiaSaffron font-semibold"
+                  >2 Stars</span
+                >
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-star text-yellow-400 mr-3"></i>
+                <span class="text-gray-300">Brigadier</span>
+                <span class="ml-auto text-indiaSaffron font-semibold"
+                  >1 Star</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Junior Commissioned Officers -->
+          <div class="bg-armyGreen rounded-xl p-6 card-hover">
+            <div class="flex items-center mb-4">
+              <div class="bg-indiaGreen p-3 rounded-full mr-4">
+                <i class="fas fa-chess-knight text-white text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white">
+                Junior Commissioned Officers
+              </h3>
+            </div>
+            <ul class="space-y-3">
+              <li class="flex items-center">
+                <i class="fas fa-chevron-up text-indiaSaffron mr-3"></i>
+                <span class="text-gray-300">Subedar Major</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-chevron-up text-indiaSaffron mr-3"></i>
+                <span class="text-gray-300">Subedar</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-chevron-up text-indiaSaffron mr-3"></i>
+                <span class="text-gray-300">Naib Subedar</span>
+              </li>
+            </ul>
+
+            <div class="mt-6 pt-4 border-t border-gray-700">
+              <div class="flex items-center mb-4">
+                <div class="bg-steelGray p-3 rounded-full mr-4">
+                  <i class="fas fa-users text-white text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white">Other Ranks</h3>
+              </div>
+              <ul class="space-y-2">
+                <li class="text-gray-300">Havildar</li>
+                <li class="text-gray-300">Naik</li>
+                <li class="text-gray-300">Lance Naik</li>
+                <li class="text-gray-300">Sepoy</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Badges Gallery -->
+          <div class="bg-armyGreen rounded-xl p-6 card-hover">
+            <div class="flex items-center mb-4">
+              <div class="bg-cadetBlue p-3 rounded-full mr-4">
+                <i class="fas fa-medal text-white text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white">Insignia Gallery</h3>
+            </div>
+            <div class="grid grid-cols-3 gap-4">
+              <div class="bg-armyDark p-4 rounded-lg text-center">
+                <i
+                  class="fas fa-star text-2xl text-yellow-400 mb-2 badge-icon"
+                ></i>
+                <div class="text-xs text-gray-300">General</div>
+              </div>
+              <div class="bg-armyDark p-4 rounded-lg text-center">
+                <i
+                  class="fas fa-crosshairs text-2xl text-red-400 mb-2 badge-icon"
+                ></i>
+                <div class="text-xs text-gray-300">Infantry</div>
+              </div>
+              <div class="bg-armyDark p-4 rounded-lg text-center">
+                <i
+                  class="fas fa-helicopter text-2xl text-blue-400 mb-2 badge-icon"
+                ></i>
+                <div class="text-xs text-gray-300">Aviation</div>
+              </div>
+              <div class="bg-armyDark p-4 rounded-lg text-center">
+                <i
+                  class="fas fa-shield-alt text-2xl text-green-400 mb-2 badge-icon"
+                ></i>
+                <div class="text-xs text-gray-300">Armoured Corps</div>
+              </div>
+              <div class="bg-armyDark p-4 rounded-lg text-center">
+                <i
+                  class="fas fa-bolt text-2xl text-purple-400 mb-2 badge-icon"
+                ></i>
+                <div class="text-xs text-gray-300">Artillery</div>
+              </div>
+              <div class="bg-armyDark p-4 rounded-lg text-center">
+                <i
+                  class="fas fa-wrench text-2xl text-orange-400 mb-2 badge-icon"
+                ></i>
+                <div class="text-xs text-gray-300">Engineers</div>
+              </div>
+            </div>
+
+            <a
+              href="#"
+              class="block mt-6 text-center text-indiaSaffron hover:text-orange-400 font-medium"
+            >
+              View All Badges <i class="fas fa-arrow-right ml-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

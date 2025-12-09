@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              armyGreen: "#3A4F41",
+              armyOlive: "#6B8E23",
+              armyNight: "#0B0B0B",
+              armyDark: "#1A1A1A",
+              indiaSaffron: "#FF9933",
+              indiaGreen: "#138808",
+              indiaWhite: "#FFFFFF",
+              steelGray: "#4A5568",
+              cadetBlue: "#5D8AA8",
+            },
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+              "roboto-mono": ["Roboto Mono", "monospace"],
+            },
+            animation: {
+              "fade-in": "fadeIn 0.8s ease-in-out",
+              "slide-up": "slideUp 0.6s ease-out",
+              "pulse-glow": "pulseGlow 2s infinite",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              slideUp: {
+                "0%": { transform: "translateY(20px)", opacity: "0" },
+                "100%": { transform: "translateY(0)", opacity: "1" },
+              },
+              pulseGlow: {
+                "0%, 100%": { boxShadow: "0 0 5px rgba(255, 153, 51, 0.3)" },
+                "50%": { boxShadow: "0 0 20px rgba(255, 153, 51, 0.6)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="./exrntCss.css" />
+  </head>
+  <body>
+    <section
+      class="parallax-section py-16"
+      style="
+        background-image: url('https://images.unsplash.com/photo-1587174486071-42e0e6d0e6bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+      "
+    >
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="bg-armyDark bg-opacity-90 rounded-2xl p-8 md:p-12">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-center mb-4 section-title"
+          >
+            About Indian Army
+          </h2>
+
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 class="text-2xl font-bold text-white mb-6">
+                Guardians of the Nation
+              </h3>
+              <p class="text-gray-300 mb-4">
+                The Indian Army is the land-based branch and the largest
+                component of the Indian Armed Forces. With over 1.4 million
+                active personnel, it is the world's second-largest standing
+                army.
+              </p>
+              <p class="text-gray-300 mb-4">
+                The primary mission of the Indian Army is to ensure national
+                security and unity, defend the nation from external aggression
+                and internal threats, and maintain peace and security within its
+                borders.
+              </p>
+              <p class="text-gray-300 mb-6">
+                The Army has a rich history of valour and sacrifice, having
+                participated in several wars and operations, both domestically
+                and internationally, while also contributing significantly to
+                United Nations peacekeeping missions.
+              </p>
+
+              <div class="flex flex-wrap gap-4">
+                <div class="bg-armyGreen p-4 rounded-lg">
+                  <div class="text-2xl font-bold text-indiaSaffron">176+</div>
+                  <div class="text-gray-300 text-sm">Years of Service</div>
+                </div>
+                <div class="bg-armyGreen p-4 rounded-lg">
+                  <div class="text-2xl font-bold text-indiaGreen">7</div>
+                  <div class="text-gray-300 text-sm">Commands</div>
+                </div>
+                <div class="bg-armyGreen p-4 rounded-lg">
+                  <div class="text-2xl font-bold text-cadetBlue">50+</div>
+                  <div class="text-gray-300 text-sm">UN Missions</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-armyGreen p-6 rounded-xl">
+              <h3 class="text-2xl font-bold text-white mb-6 text-center">
+                Core Values
+              </h3>
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <div class="bg-indiaSaffron p-3 rounded-full mr-4">
+                    <i class="fas fa-flag text-white"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-white mb-1">Duty</h4>
+                    <p class="text-gray-300 text-sm">
+                      To defend the nation with unwavering commitment
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div class="bg-indiaGreen p-3 rounded-full mr-4">
+                    <i class="fas fa-shield-alt text-white"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-white mb-1">Honour</h4>
+                    <p class="text-gray-300 text-sm">
+                      Upholding the highest standards of integrity
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div class="bg-cadetBlue p-3 rounded-full mr-4">
+                    <i class="fas fa-heart text-white"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-white mb-1">Courage</h4>
+                    <p class="text-gray-300 text-sm">
+                      Physical and moral courage in the face of adversity
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div class="bg-red-600 p-3 rounded-full mr-4">
+                    <i class="fas fa-users text-white"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-white mb-1">Sacrifice</h4>
+                    <p class="text-gray-300 text-sm">
+                      Selfless service to the nation above all
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

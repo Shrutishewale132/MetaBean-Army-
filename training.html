@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              armyGreen: "#3A4F41",
+              armyOlive: "#6B8E23",
+              armyNight: "#0B0B0B",
+              armyDark: "#1A1A1A",
+              indiaSaffron: "#FF9933",
+              indiaGreen: "#138808",
+              indiaWhite: "#FFFFFF",
+              steelGray: "#4A5568",
+              cadetBlue: "#5D8AA8",
+            },
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+              "roboto-mono": ["Roboto Mono", "monospace"],
+            },
+            animation: {
+              "fade-in": "fadeIn 0.8s ease-in-out",
+              "slide-up": "slideUp 0.6s ease-out",
+              "pulse-glow": "pulseGlow 2s infinite",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              slideUp: {
+                "0%": { transform: "translateY(20px)", opacity: "0" },
+                "100%": { transform: "translateY(0)", opacity: "1" },
+              },
+              pulseGlow: {
+                "0%, 100%": { boxShadow: "0 0 5px rgba(255, 153, 51, 0.3)" },
+                "50%": { boxShadow: "0 0 20px rgba(255, 153, 51, 0.6)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="./exrntCss.css" />
+  </head>
+  <body>
+    <section
+      id="training"
+      class="parallax-section py-16"
+      style="
+        background-image: url('https://images.unsplash.com/photo-1589656966895-2f33e7653819?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+      "
+    >
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="bg-armyDark bg-opacity-90 rounded-2xl p-8 md:p-12">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-center mb-4 section-title"
+          >
+            Elite Training Programs
+          </h2>
+          <p class="text-center text-gray-300 max-w-3xl mx-auto mb-12">
+            From basic combat to specialized warfare, our training transforms
+            civilians into warriors.
+          </p>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Training Card 1 -->
+            <div
+              class="bg-armyGreen rounded-xl p-6 card-hover animate-slide-up"
+            >
+              <div class="flex justify-between items-start mb-4">
+                <div class="bg-red-600 p-3 rounded-full">
+                  <i class="fas fa-user-ninja text-white text-xl"></i>
+                </div>
+                <span
+                  class="bg-indiaSaffron text-white text-xs font-bold px-3 py-1 rounded-full"
+                  >COMMANDO</span
+                >
+              </div>
+              <h3 class="text-xl font-bold text-white mb-3">
+                Para Special Forces
+              </h3>
+              <p class="text-gray-300 mb-4">
+                Elite counter-terrorism and special operations training.
+                Airborne, counter-insurgency, and hostage rescue.
+              </p>
+              <ul class="text-sm text-gray-400 space-y-1 mb-4">
+                <li>
+                  <i class="fas fa-check text-indiaGreen mr-2"></i> 90-week
+                  intensive program
+                </li>
+                <li>
+                  <i class="fas fa-check text-indiaGreen mr-2"></i> HALO/HAHO
+                  parachute training
+                </li>
+                <li>
+                  <i class="fas fa-check text-indiaGreen mr-2"></i>
+                  Counter-terrorism tactics
+                </li>
+              </ul>
+              <a
+                href="#"
+                class="text-indiaSaffron hover:text-orange-400 font-medium text-sm"
+              >
+                Learn More <i class="fas fa-arrow-right ml-1"></i>
+              </a>
+            </div>
+
+            <!-- Training Card 2 -->
+            <div
+              class="bg-armyGreen rounded-xl p-6 card-hover animate-slide-up"
+            >
+              <div class="flex justify-between items-start mb-4">
+                <div class="bg-blue-600 p-3 rounded-full">
+                  <i class="fas fa-helicopter text-white text-xl"></i>
+                </div>
+                <span
+                  class="bg-indiaGreen text-white text-xs font-bold px-3 py-1 rounded-full"
+                  >AVIATION</span
+                >
+              </div>
+              <h3 class="text-xl font-bold text-white mb-3">
+                Army Aviation Corps
+              </h3>
+              <p class="text-gray-300 mb-4">
+                Pilot training for rotary-wing aircraft. Combat support,
+                reconnaissance, and medical evacuation operations.
+              </p>
+              <ul class="text-sm text-gray-400 space-y-1 mb-4">
+                <li>
+                  <i class="fas fa-check text-indiaGreen mr-2"></i> Fixed and
+                  rotary wing training
+                </li>
+                <li>
+                  <i class="fas fa-check text-indiaGreen mr-2"></i> Night flying
+                  certification
+                </li>
+                <li>
+                  <i class="fas fa-check text-indiaGreen mr-2"></i> Combat
+                  search and rescue
+                </li>
+              </ul>
+              <a
+                href="#"
+                class="text-indiaSaffron hover:text-orange-400 font-medium text-sm"
+              >
+                Learn More <i class="fas fa-arrow-right ml-1"></i>
+              </a>
+            </div>
+
+            <!-- Training Card 3 -->
+            <div
+              class="bg-armyGreen rounded-xl p-6 card-hover animate-slide-up"
+            >
+              <div class="flex justify-between items-start mb-4">
+                <div class="bg-green-600 p-3 rounded-full">
+                  <i class="fas fa-mountain text-white text-xl"></i>
+                </div>
+                <span
+                  class="bg-cadetBlue text-white text-xs font-bold px-3 py-1 rounded-full"
+                  >MOUNTAIN</span
+                >
+              </div>
+              <h3 class="text-xl font-bold text-white mb-3">
+                High Altitude Warfare
+              </h3>
+              <p class="text-gray-300 mb-4">
+                Specialized training for operations in extreme mountainous
+                terrain, high altitude, and glaciated regions.
+              </p>
+              <ul class="text-sm text-gray-400 space-y-1 mb-4">
+                <li>
+                  <i class="fas fa-check text-indiaGreen mr-2"></i> Ice climbing
+                  and glaciation
+                </li>
+                <li>
+                  <i class="fas fa-check text-indiaGreen mr-2"></i>
+                  Acclimatization protocols
+                </li>
+                <li>
+                  <i class="fas fa-check text-indiaGreen mr-2"></i> Survival in
+                  extreme cold
+                </li>
+              </ul>
+              <a
+                href="#"
+                class="text-indiaSaffron hover:text-orange-400 font-medium text-sm"
+              >
+                Learn More <i class="fas fa-arrow-right ml-1"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="mt-12 text-center">
+            <a
+              href="#"
+              class="inline-flex items-center bg-indiaSaffron hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg transition duration-300"
+            >
+              <i class="fas fa-list mr-2"></i> View All Training Programs
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

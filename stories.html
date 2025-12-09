@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              armyGreen: "#3A4F41",
+              armyOlive: "#6B8E23",
+              armyNight: "#0B0B0B",
+              armyDark: "#1A1A1A",
+              indiaSaffron: "#FF9933",
+              indiaGreen: "#138808",
+              indiaWhite: "#FFFFFF",
+              steelGray: "#4A5568",
+              cadetBlue: "#5D8AA8",
+            },
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+              "roboto-mono": ["Roboto Mono", "monospace"],
+            },
+            animation: {
+              "fade-in": "fadeIn 0.8s ease-in-out",
+              "slide-up": "slideUp 0.6s ease-out",
+              "pulse-glow": "pulseGlow 2s infinite",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              slideUp: {
+                "0%": { transform: "translateY(20px)", opacity: "0" },
+                "100%": { transform: "translateY(0)", opacity: "1" },
+              },
+              pulseGlow: {
+                "0%, 100%": { boxShadow: "0 0 5px rgba(255, 153, 51, 0.3)" },
+                "50%": { boxShadow: "0 0 20px rgba(255, 153, 51, 0.6)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="./exrntCss.css" />
+  </head>
+  <body>
+    <!-- 6️⃣ INSPIRATIONAL STORIES -->
+    <section
+      class="parallax-section py-16"
+      style="
+        background-image: url('https://images.unsplash.com/photo-1511895426328-dc8714191300?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+      "
+    >
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="bg-armyDark bg-opacity-90 rounded-2xl p-8 md:p-12">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-center mb-4 section-title"
+          >
+            Heroes of India
+          </h2>
+          <p class="text-center text-gray-300 max-w-3xl mx-auto mb-12">
+            Stories of unparalleled courage, sacrifice, and patriotism that
+            inspire generations.
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-8">
+            <!-- Story 1 -->
+            <div class="bg-armyGreen rounded-xl p-6 card-hover">
+              <div class="flex items-start mb-4">
+                <div class="bg-red-600 p-3 rounded-full mr-4">
+                  <i class="fas fa-medal text-white text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-white">
+                    Captain Vikram Batra
+                  </h3>
+                  <p class="text-indiaSaffron font-semibold">
+                    Param Vir Chakra
+                  </p>
+                </div>
+              </div>
+              <p class="text-gray-300 mb-4">
+                "Yeh Dil Maange More!" - Led one of the most successful
+                operations in the Kargil War, capturing Point 5140 and Point
+                4875 before making the ultimate sacrifice.
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-gray-400">Kargil War, 1999</span>
+                <a
+                  href="#"
+                  class="text-indiaSaffron hover:text-orange-400 text-sm font-medium"
+                >
+                  Read Full Story <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Story 2 -->
+            <div class="bg-armyGreen rounded-xl p-6 card-hover">
+              <div class="flex items-start mb-4">
+                <div class="bg-blue-600 p-3 rounded-full mr-4">
+                  <i class="fas fa-medal text-white text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-white">
+                    Major Sandeep Unnikrishnan
+                  </h3>
+                  <p class="text-indiaSaffron font-semibold">Ashoka Chakra</p>
+                </div>
+              </div>
+              <p class="text-gray-300 mb-4">
+                "Do not come up, I'll handle them." - NSG commando who led the
+                operation during the 2008 Mumbai attacks, saving hostages while
+                engaging terrorists.
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-gray-400">26/11 Mumbai Attacks</span>
+                <a
+                  href="#"
+                  class="text-indiaSaffron hover:text-orange-400 text-sm font-medium"
+                >
+                  Read Full Story <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 text-center">
+            <a
+              href="#"
+              class="text-indiaSaffron hover:text-orange-400 font-medium"
+            >
+              <i class="fas fa-book-open mr-2"></i> Explore More Heroic Stories
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

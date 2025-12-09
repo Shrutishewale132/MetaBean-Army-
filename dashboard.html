@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              armyGreen: "#3A4F41",
+              armyOlive: "#6B8E23",
+              armyNight: "#0B0B0B",
+              armyDark: "#1A1A1A",
+              indiaSaffron: "#FF9933",
+              indiaGreen: "#138808",
+              indiaWhite: "#FFFFFF",
+              steelGray: "#4A5568",
+              cadetBlue: "#5D8AA8",
+            },
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+              "roboto-mono": ["Roboto Mono", "monospace"],
+            },
+            animation: {
+              "fade-in": "fadeIn 0.8s ease-in-out",
+              "slide-up": "slideUp 0.6s ease-out",
+              "pulse-glow": "pulseGlow 2s infinite",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              slideUp: {
+                "0%": { transform: "translateY(20px)", opacity: "0" },
+                "100%": { transform: "translateY(0)", opacity: "1" },
+              },
+              pulseGlow: {
+                "0%, 100%": { boxShadow: "0 0 5px rgba(255, 153, 51, 0.3)" },
+                "50%": { boxShadow: "0 0 20px rgba(255, 153, 51, 0.6)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="./exrntCss.css" />
+  </head>
+  <body>
+    <section class="py-16 bg-armyDark">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-center mb-4 section-title"
+        >
+          Cadet Dashboard
+        </h2>
+        <p class="text-center text-gray-400 max-w-3xl mx-auto mb-12">
+          Demo interface showing features available to registered cadets and
+          applicants.
+        </p>
+
+        <div class="bg-armyGreen rounded-xl overflow-hidden">
+          <!-- Dashboard Header -->
+          <div class="bg-armyDark p-6 border-b border-gray-700">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+              <div class="flex items-center mb-4 md:mb-0">
+                <div class="bg-indiaSaffron p-3 rounded-full mr-4">
+                  <i class="fas fa-user text-white text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-white">
+                    Cadet Rajesh Kumar
+                  </h3>
+                  <p class="text-gray-400">NCC ID: NCC/2023/DL/1542</p>
+                </div>
+              </div>
+              <div class="flex space-x-4">
+                <span
+                  class="bg-indiaGreen text-white px-3 py-1 rounded-full text-sm"
+                  >Active</span
+                >
+                <span
+                  class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm"
+                  >A 'Certified</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Dashboard Content -->
+          <div class="p-6">
+            <div class="grid md:grid-cols-4 gap-6 mb-8">
+              <div class="bg-armyDark p-4 rounded-xl text-center">
+                <div class="text-3xl font-bold text-indiaSaffron mb-2">85%</div>
+                <div class="text-gray-300 text-sm">Training Progress</div>
+              </div>
+              <div class="bg-armyDark p-4 rounded-xl text-center">
+                <div class="text-3xl font-bold text-indiaGreen mb-2">12</div>
+                <div class="text-gray-300 text-sm">Completed Modules</div>
+              </div>
+              <div class="bg-armyDark p-4 rounded-xl text-center">
+                <div class="text-3xl font-bold text-cadetBlue mb-2">3</div>
+                <div class="text-gray-300 text-sm">Upcoming Camps</div>
+              </div>
+              <div class="bg-armyDark p-4 rounded-xl text-center">
+                <div class="text-3xl font-bold text-yellow-400 mb-2">A+</div>
+                <div class="text-gray-300 text-sm">Overall Grade</div>
+              </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="bg-armyDark p-6 rounded-xl">
+                <h4 class="text-lg font-bold text-white mb-4">
+                  Recent Activities
+                </h4>
+                <ul class="space-y-3">
+                  <li class="flex items-center text-gray-300">
+                    <i class="fas fa-check-circle text-indiaGreen mr-3"></i>
+                    <span>Weapons Training Completed</span>
+                    <span class="ml-auto text-sm text-gray-400"
+                      >2 days ago</span
+                    >
+                  </li>
+                  <li class="flex items-center text-gray-300">
+                    <i class="fas fa-file-alt text-indiaSaffron mr-3"></i>
+                    <span>Application Submitted for AGC</span>
+                    <span class="ml-auto text-sm text-gray-400"
+                      >1 week ago</span
+                    >
+                  </li>
+                  <li class="flex items-center text-gray-300">
+                    <i class="fas fa-calendar-check text-blue-400 mr-3"></i>
+                    <span>Winter Camp Registration</span>
+                    <span class="ml-auto text-sm text-gray-400">Upcoming</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="bg-armyDark p-6 rounded-xl">
+                <h4 class="text-lg font-bold text-white mb-4">Quick Actions</h4>
+                <div class="grid grid-cols-2 gap-4">
+                  <a
+                    href="#"
+                    class="bg-armyGreen hover:bg-gray-800 p-4 rounded-lg text-center transition duration-300"
+                  >
+                    <i class="fas fa-book text-indiaSaffron text-xl mb-2"></i>
+                    <div class="text-white text-sm">Training Materials</div>
+                  </a>
+                  <a
+                    href="#"
+                    class="bg-armyGreen hover:bg-gray-800 p-4 rounded-lg text-center transition duration-300"
+                  >
+                    <i class="fas fa-tasks text-indiaGreen text-xl mb-2"></i>
+                    <div class="text-white text-sm">Progress Report</div>
+                  </a>
+                  <a
+                    href="#"
+                    class="bg-armyGreen hover:bg-gray-800 p-4 rounded-lg text-center transition duration-300"
+                  >
+                    <i class="fas fa-calendar text-blue-400 text-xl mb-2"></i>
+                    <div class="text-white text-sm">Camp Schedule</div>
+                  </a>
+                  <a
+                    href="#"
+                    class="bg-armyGreen hover:bg-gray-800 p-4 rounded-lg text-center transition duration-300"
+                  >
+                    <i
+                      class="fas fa-certificate text-yellow-400 text-xl mb-2"
+                    ></i>
+                    <div class="text-white text-sm">Certificates</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
